@@ -73,94 +73,6 @@ function init() {
       writeToFile(fileName, answer);
     });
 }
-//
-
-// Array.prototype.forEach()
-// const myArray = [2, 4, 6, 8];
-
-// myArray.forEach((num) => console.log(num));
-
-// String.prototype.toLowerCase()
-//const teamMembers = {
-  //name: 'Eric',
-  //age: 28,
-  //occupation: 'Full-Stack Web Developer',
-//};
-
-//console.log(teamMembers);
-
-// Prototype methods on constructor function
-//function Movie(title, releaseYear) {
-  //this.title = title;
-  //this.releaseYear = releaseYear;
-//}
-
-//const superman = new Movie('Superman', 1978);
-
-//Movie.prototype.logInfo = function () {
-  //console.log(`${this.title} was released in ${this.releaseYear}`);
-//};
-
-//superman.logInfo();
-
-// So, being able to update a prototype after the fact that instantly
-// affects all existing created items is one thing that is not so
-// easily done with the composition method that I demonstrated before
-
-// But how useful is that, really? What exactly is the use case for
-// extending existing objects (all of them) after they've already
-// been created. If anything, that is something that can and would
-// create lots of confusion for other developers were they unaware of
-// it being done and it best avoided.
-
-// instead, if we need to augment existing objects, we can simply
-// extend them using a higher order function. 
-
-// The following extends an existing object with a `play` method
-// function addPlayer(movie) {
-  // movie.play = () => {
-    // console.log(`Playing the movie ${movie.title}`);
-// }
-  // return movie;
-// }
-
-// If, however, you wanted to extend the original construction method
-// (assuming we used the composition format I showed in the previous
-// lesson). It might look like this:
-
-// first, let's make the compser:
-
-// function makeMovie(title, releaseYear) {
-  // return {
-    // title,
-    // releaseYear,
-  // };
-// }
-
-// function withLogging(composer) {
-  // return (...args) => {
-    // const obj = composer(...args);
-    // obj.logInfo = () => {
-      // console.log(`${obj.title} was released in ${obj.releaseYear}`);
-    // }
-    // return obj;
-  // };
-// }
-
-// const makeMovieWithLogging = withLogging(makeMovie);
-
-// function insDemo() {
-  // const spiderman = makeMovieWithLogging('Spiderman', '2002');
-
-  // spiderman.logInfo();
-
-  //spiderman.title = 'The Amazing Spider-Man'
-  // spiderman.releaseYear = '2012';
-  
-  // spiderman.logInfo();  
-// }
-
-// insDemo();
 
 //
 
@@ -182,7 +94,7 @@ function Developer(name, manager, employee, email, number) {
   }
   
   // Creates a new object using the 'Developer' constructor
-  const rita = new Developer('Rita', 'Bob', 333, 3333333333, 'wllm_anderson@yahoo.com');
+  const rita = new Developer('Rita', 'Bob', 333, 3333333333, 'abcdef@yahoo.com');
   
   // Calls the 'introduction()' method on the new object
   rita.introduction();
